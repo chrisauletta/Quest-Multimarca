@@ -1,11 +1,12 @@
 <h3 align="center"> Teste upLexis - Christian Auletta </h3>
 
 <h4>Ferramentas</h4>
-    <p>Framework Lumen, pois para uma API tem melhor performance</p>
-    <p>Captura dos dados em expressão regular</p>
-    <p>Vue.js com axios para consumo da API</p>
-    <p>Autenticação JWT</p>
-
+<ul>
+    <li>Framework Lumen, pois para uma API tem melhor performance</li>
+    <li>Captura dos dados em expressão regular</li>
+    <li>Vue.js com axios para consumo da API</li>
+    <li>Autenticação JWT</li>
+</ul>
 <h4>Intruções</h4>
 
 <h4>Banco de Dados</h4>
