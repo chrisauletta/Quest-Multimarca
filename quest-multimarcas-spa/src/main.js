@@ -7,7 +7,8 @@ import'./assets/css/style.css'
 import axios from 'axios';
 
 Vue.prototype.$http = axios;
-Vue.prototype.$url = "http://localhost:8000/"
+//Vue.prototype.$url = "https://api.cirandababy.com/"
+Vue.prototype.$url = "localhost:8000/"
 
 Vue.config.productionTip = false
 

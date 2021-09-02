@@ -9,7 +9,10 @@
         </div>
         <div class="card-body d-flex">
           <input v-model="link" type="text " class="form-control" placeholder="Link" required />
-          <button @click="buscarAnuncios()" class="btn btn-primary ms-2">Buscar</button>
+          <button @click="buscarAnuncios()" class="btn btn-primary ms-2" :disabled="timeRequest" >
+            <span v-if="timeRequest" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Buscar
+          </button>
         </div>
         <ul>
           <li v-for="(item, index) in anuncios" :key="index">
@@ -30,7 +33,8 @@ export default {
       link: "",
       anuncios:[],
       erro:"",
-      token:""
+      token:"",
+      timeRequest:false
     };
   },
   created() {
@@ -43,6 +47,7 @@ export default {
   },
   methods: {
     buscarAnuncios(){ 
+      this.timeRequest = true;
       this.$http
       .post(this.$url+"carros/anuncio", {
         link:this.link
@@ -52,12 +57,12 @@ export default {
       .then((response) => {
         if (response.data.length > 0){
           this.anuncios = response.data;
-        } else {
- 
+          this.timeRequest = false;
         }
       })
       .catch((e) => {
         console.log(e);
+        this.$router.push("/");
       });
     }
   },
