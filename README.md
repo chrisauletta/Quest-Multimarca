@@ -26,4 +26,4 @@
 </ul>
 
 <h3>Demonstação https://cirandababy.com</h3>
-<p>Usei um dominio pessoal para super a demonstração</p>
+<p>Usei um dominio pessoal para subir a demonstração</p>
