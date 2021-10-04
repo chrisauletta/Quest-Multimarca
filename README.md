@@ -1,4 +1,3 @@
-<h3 align="center"> Teste upLexis - Christian Auletta </h3>
 
 <h4>Ferramentas</h4>
 <ul>
